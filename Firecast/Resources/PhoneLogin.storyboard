@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ylm-ji-AOU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Phone Login-->
+        <scene sceneID="vgM-m1-8M0">
+            <objects>
+                <viewController id="kOk-BU-dUO" customClass="PhoneLoginViewController" customModule="Firecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ovM-Jx-Y1z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XP1-iv-g3y">
+                                <rect key="frame" x="50" y="114" width="275" height="68"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="382-in-nWJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3d-J2-9ap">
+                                                <rect key="frame" x="0.0" y="0.0" width="227" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="kOk-BU-dUO" id="53y-vr-kWZ"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chq-cq-rWr">
+                                                <rect key="frame" x="235" y="0.0" width="40" height="30"/>
+                                                <state key="normal" title="Send"/>
+                                                <connections>
+                                                    <action selector="sendButtonAction:" destination="kOk-BU-dUO" eventType="touchUpInside" id="KvW-kx-v2Y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="noD-Li-ekd">
+                                        <rect key="frame" x="0.0" y="38" width="275" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter verification code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbf-yW-3jR">
+                                                <rect key="frame" x="0.0" y="0.0" width="227" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="kOk-BU-dUO" id="TMH-pf-3Tj"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzR-7m-cB1">
+                                                <rect key="frame" x="235" y="0.0" width="40" height="30"/>
+                                                <state key="normal" title="Verify"/>
+                                                <connections>
+                                                    <action selector="verifyButtonAction:" destination="kOk-BU-dUO" eventType="touchUpInside" id="dBK-6s-wNc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IzR-7m-cB1" firstAttribute="width" secondItem="chq-cq-rWr" secondAttribute="width" id="qYc-Fq-KgL"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XP1-iv-g3y" firstAttribute="leading" secondItem="aMs-2n-ZCm" secondAttribute="leading" constant="50" id="C93-Up-nuU"/>
+                            <constraint firstItem="aMs-2n-ZCm" firstAttribute="trailing" secondItem="XP1-iv-g3y" secondAttribute="trailing" constant="50" id="PXW-ns-s4W"/>
+                            <constraint firstItem="XP1-iv-g3y" firstAttribute="top" secondItem="aMs-2n-ZCm" secondAttribute="top" constant="50" id="WFj-RO-SMM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aMs-2n-ZCm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Phone Login" id="avA-Lk-6fc"/>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="t3d-J2-9ap" id="EtS-Hb-8fr"/>
+                        <outlet property="verificationCodeTextField" destination="kbf-yW-3jR" id="ngO-Sk-jjJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MkF-p0-CnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="111.99400299850076"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L8c-86-uPJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ylm-ji-AOU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nO9-Si-JuF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kOk-BU-dUO" kind="relationship" relationship="rootViewController" id="S1W-6a-vKM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tQB-nz-JWI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.199999999999999" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_Firecast {
+  umbrella header "Pods-Firecast-umbrella.h"
+
+  export *
+  module * { export * }
+}
